@@ -22,6 +22,8 @@ export class Receipt {
     }
 
     generateReceipt(){
-        console.log([...this.lineItems, `Sales Taxes : ${this.totalTax.toFixed(2)}`, `Total : ${this.totalPrice.toFixed(2)}`].join("\n"));
+        const generatedReceipt = [...this.lineItems, `Sales Taxes : ${this.totalTax.toFixed(2)}`, `Total : ${this.totalPrice.toFixed(2)}`];
+        console.log(generatedReceipt.join("\n"));
+        return generatedReceipt;
     }
 }

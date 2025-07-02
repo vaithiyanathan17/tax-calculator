@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "Calculate product tax at runtime",
   "main": "index.ts",
+  "type": "commonjs",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts"
+    "start": "node dist/src/index.js",
+    "dev": "ts-node src/index.ts",
+    "cli": "ts-node src/cli.ts",
+    "test": "mocha --require ts-node/register test/**/*.spec.ts"
   },
   "repository": {
     "type": "git",
@@ -22,8 +25,14 @@
   },
   "homepage": "https://github.com/vaithiyanathan17/tax-calculator#readme",
   "devDependencies": {
-    "@types/node": "^24.0.10",
-    "ts-node": "^10.9.2",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.9",
+    "chai": "^4.3.10",
+    "mocha": "^10.7.3",
+    "ts-node": "^7.0.1",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@types/node": "^20.8.2"
   }
 }
