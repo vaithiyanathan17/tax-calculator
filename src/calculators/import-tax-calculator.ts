@@ -1,4 +1,5 @@
 import { TaxCalculator } from "./tax-calculator";
+import { roundTax } from "./utility";
 
 export class ImportTaxCalculator implements TaxCalculator{
     private calculator;
@@ -7,6 +8,6 @@ export class ImportTaxCalculator implements TaxCalculator{
     }
     calculate(item: any) {
         const salesTax: number = this.calculator.calculate(item) as number;
-        return item.isImported ? salesTax + (item.price * 0.5) : salesTax;
+        return item.isImported ? salesTax + roundTax(item.price * 0.05) : salesTax;
     }
 }

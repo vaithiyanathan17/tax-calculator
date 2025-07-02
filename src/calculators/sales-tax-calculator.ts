@@ -1,4 +1,5 @@
 import { TaxCalculator } from "./tax-calculator";
+import { roundTax } from "./utility";
 
 export class SalesTaxCalculator implements TaxCalculator{
     private calculator;
@@ -7,6 +8,6 @@ export class SalesTaxCalculator implements TaxCalculator{
     }
     calculate(item: any) {
         const baseTax: number = this.calculator.calculate(item) as number;
-        return item.isExempt ? baseTax : baseTax + (item.price* 0.10);
+        return item.isExempt ? baseTax : baseTax + roundTax(item.price * 0.10);
     }
 }
