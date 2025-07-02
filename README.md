@@ -1,4 +1,4 @@
-# Tax Calculator
+# Tax Calculator (<sub><sup>Node version: 18.16.0</sup></sub>)
 
 A dynamic, runtime tax calculator for products, featuring a flexible architecture using the **Decorator Pattern**. This project allows you to easily compute sales and import taxes for various products, with a user-friendly CLI and robust test coverage.
 
