@@ -1,0 +1,29 @@
+{
+  "name": "tax-calculator",
+  "version": "1.0.0",
+  "description": "Calculate product tax at runtime",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaithiyanathan17/tax-calculator.git"
+  },
+  "keywords": [
+    "tax-calculator"
+  ],
+  "author": "vaithiyanathan.v",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vaithiyanathan17/tax-calculator/issues"
+  },
+  "homepage": "https://github.com/vaithiyanathan17/tax-calculator#readme",
+  "devDependencies": {
+    "@types/node": "^24.0.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
