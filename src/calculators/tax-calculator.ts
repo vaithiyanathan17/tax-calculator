@@ -1,3 +1,5 @@
+import { ItemObject } from "../type";
+
 export interface TaxCalculator {
-    calculate(item: any): number | void;
+    calculate(item: ItemObject): number;
 }
